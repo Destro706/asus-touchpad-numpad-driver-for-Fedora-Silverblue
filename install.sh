@@ -114,10 +114,10 @@ done
 echo "Add asus touchpad service in /etc/systemd/system/"
 cat asus_touchpad.service | LAYOUT=$model PERCENTAGE_KEY=$percentage_key envsubst '$LAYOUT $PERCENTAGE_KEY' > /etc/systemd/system/asus_touchpad_numpad.service
 
-mkdir -p /usr/share/asus_touchpad_numpad-driver/numpad_layouts
+mkdir -p /usr/local/share/asus_touchpad_numpad-driver/numpad_layouts
 mkdir -p /var/log/asus_touchpad_numpad-driver
-install asus_touchpad.py /usr/share/asus_touchpad_numpad-driver/
-install -t /usr/share/asus_touchpad_numpad-driver/numpad_layouts numpad_layouts/*.py
+install asus_touchpad.py /usr/local/share/asus_touchpad_numpad-driver/
+install -t /usr/local/share/asus_touchpad_numpad-driver/numpad_layouts numpad_layouts/*.py
 
 echo "i2c-dev" | tee /etc/modules-load.d/i2c-dev.conf >/dev/null
 
