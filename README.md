@@ -54,6 +54,10 @@ sudo pacman -S libevdev python-libevdev i2c-tools git
 ```
 sudo dnf install libevdev python-libevdev i2c-tools git
 ```
+- Fedora Silverblue:
+```
+rpm-ostree install python-libevdev i2c-tools
+```
 
 - NixOS:
 
