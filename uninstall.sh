@@ -35,10 +35,10 @@ then
 	exit 1
 fi
 
-rm -rf /usr/share/asus_touchpad_numpad-driver/
+rm -rf /usr/local/share/asus_touchpad_numpad-driver/
 if [[ $? != 0 ]]
 then
-	echo "/usr/share/asus_touchpad_numpad-driver/ cannot be removed correctly..."
+	echo "/usr/local/share/asus_touchpad_numpad-driver/ cannot be removed correctly..."
 	exit 1
 fi
 
